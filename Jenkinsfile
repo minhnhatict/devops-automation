@@ -24,7 +24,7 @@ pipeline {
                        sh 'docker login -u minhnhatict -p ${dockerhub-minhnhatict-pwd}' 
 }
                     
-                   sh 'docker push javatechie/devops-integration'
+                   sh 'docker push minhnhatict/devops-integration'
                 }
             }
         }
