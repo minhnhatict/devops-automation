@@ -20,8 +20,8 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'dockerhub-minhnhatict-pwd', variable: 'dockerhub-minhnhatict-pwd')]) {
-                       sh 'docker login -u minhnhatict -p ${dockerhub-minhnhatict-pwd}' 
+                   withCredentials([string(credentialsId: 'dockerhub-minhnhatict-pwd', variable: 'dockerhubpwd')]) {
+                   sh 'docker login -u minhnhatict -p ${dockerhubpwd}' 
 }
                     
                    sh 'docker push minhnhatict/devops-integration'
